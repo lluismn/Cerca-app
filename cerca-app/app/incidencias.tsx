@@ -1,17 +1,17 @@
-import GoHomeButton from "@/components/GoHomeButton";
-import { StyleSheet, Text, View } from "react-native";
+import Header from "@/components/Header";
+import { StyleSheet, View } from "react-native";
 
 export default function Incidencias() {
   return (
     <View
       style={styles.container}
     >
-      <Text>Reportar una incidencia</Text>
-      <Text>Pronto podrás reportar incidencias del hogar.</Text>
-      <Text>
+      <AppText>Reportar una incidencia</AppText>
+      <AppText>Pronto podrás reportar incidencias del hogar.</AppText>
+      <AppText>
         Para más información, visita nuestra sección de soporte profesional.
-      </Text>
-      <GoHomeButton />
+      </AppText>
+      <Header />
     </View>
   );
 }

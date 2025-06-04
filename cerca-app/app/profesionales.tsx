@@ -1,16 +1,17 @@
+import AppText from "@/components/AppText";
 import GoHomeButton from "@/components/GoHomeButton";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function Profesionales() {
   return (
     <View
       style={styles.container}
     >
-      <Text>Contacta con un profesional</Text>
-      <Text>Pronto podrás reportar incidencias del hogar.</Text>
-      <Text>
+      <AppText>Contacta con un profesional</AppText>
+      <AppText>Pronto podrás reportar incidencias del hogar.</AppText>
+      <AppText>
         Para más información, visita nuestra sección de soporte profesional.
-      </Text>
+      </AppText>
       <GoHomeButton />
     </View>
   );

@@ -1,48 +1,49 @@
-import { Link } from "expo-router";
-import { Button, StyleSheet, Text, View } from "react-native";
+import BottomNav from "@/components/BottomNav";
+import Call12Button from "@/components/Call122Button";
+import Header from "@/components/Header";
+import OptionCard from "@/components/OptionCard";
+import { ScrollView, StyleSheet, View } from "react-native";
+import EmergencyNotice from '../components/EmergencyNotice';
 
 export default function Home() {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Bienvenido a CERCA</Text>
-            <View style={styles.buttonContainer}>
-                <Link href='/incidencias' asChild>
-                    <Button title="Ayuda con una incidencia" />
-                </Link>
-                <Link href='/profesionales' asChild>
-                    <Button title="Soporte profesional" />
-                </Link>
-                <Link href='/glosario' asChild>
-                    <Button title="Glosario práctico" />
-                </Link>
-            </View>
-        </View>
-    )
+  return (
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        <Header />
+        <OptionCard
+          icon="alert-circle"
+          title="Ayuda con una inidencia"
+          description="Responde unas preguntas simples para identificar el problema y encontrar una solución paso a paso."
+          href="/incidencias"
+        />
+        <OptionCard
+          icon="handshake"
+          title="Contacto con profesionales"
+          description="Te guiamos para que encuentres al profesional más adecuado según el tipo de problema que tengas."
+          href="/profesionales"
+        />
+        <OptionCard
+          icon="book-open"
+          title="Glosario práctico"
+          description="Consulta definiciones, fotos y preguntas frecuentes para entender mejor el vocabulario del hogar."
+          href="/glosario"
+        />
+        <EmergencyNotice />
+        <Call12Button />
+      </ScrollView>
+      <BottomNav active='home' />
+    </View>
+  );
 }
 
-
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#fff"
-    },
-    buttonContainer: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 10,
-        width: "100%",
-        padding: 20,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: "bold",
-    },
-    subtitle: {
-        fontSize: 16,
-        marginTop: 10,
-    }
-})
+  container: {
+    display: "flex",
+    flex: 1,
+    backgroundColor: '#1C2A44'
+  },
+  scroll: {
+    padding: 24,
+    paddingBottom: 100,
+  },
+});
