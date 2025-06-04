@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 32,
     fontWeight: "medium",
-    // color: "#fff",
+    color: "#fff",
   },
   question: {
     fontSize: 32,

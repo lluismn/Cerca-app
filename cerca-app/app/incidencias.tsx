@@ -1,3 +1,4 @@
+import AppText from "@/components/AppText";
 import Header from "@/components/Header";
 import { StyleSheet, View } from "react-native";
 
