@@ -27,6 +27,7 @@ export default function Call12Button() {
 
 const styles = StyleSheet.create({
     button: {
+        marginTop: 8,
         backgroundColor: '#F8F8F8',
         borderRadius: 38,
         paddingVertical: 18,

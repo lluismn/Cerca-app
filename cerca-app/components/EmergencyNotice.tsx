@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 12,
-        marginTop: 16,
+        marginTop: 12,
         padding: 12,
     },
     icon: {

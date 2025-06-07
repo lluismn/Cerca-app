@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    marginTop: 32,
+    marginTop: 54,
+    marginBottom: 12,
   },
   logo: {
     width: 40,
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "medium",
     color: "#fff",
+    marginTop: 16,
   },
   question: {
     fontSize: 32,

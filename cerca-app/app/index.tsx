@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   scroll: {
     padding: 24,
     paddingBottom: 100,
-    gap: 24,
+    // gap: 20,
   },
   background: {
     flex: 1,
