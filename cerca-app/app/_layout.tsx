@@ -25,10 +25,13 @@ export default function RootLayout() {
           require("../assets/images/warning.png"),
           require("../assets/images/emergency-call.png"),
           require("../assets/images/bottomNav/home-home.png"),
-          require("../assets/images/bottomNav/handshake-home.png"),
+          require("../assets/images/bottomNav/profesional-home.png"),
           require("../assets/images/bottomNav/call-home.png"),
           require("../assets/background/home.png"),
           require("../assets/images/logo-intro.png"),
+          require("../assets/images/bottomNav/home-app.png"),
+          require("../assets/images/bottomNav/profesional-app.png"),
+          require("../assets/images/bottomNav/call-app.png"),
         ]);
 
         // 2. Comprueba si se ha visto la intro

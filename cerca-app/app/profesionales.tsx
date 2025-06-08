@@ -12,7 +12,7 @@ export default function Profesionales() {
       <AppText>
         Para más información, visita nuestra sección de soporte profesional.
       </AppText>
-      <BottomNav active="home" />
+      <BottomNav active="app" />
     </View>
   );
 }

@@ -15,7 +15,7 @@ export default function Glosario() {
         </AppText>
       </>
       <>
-        <BottomNav active="home" />
+        <BottomNav active="app" />
       </>
     </View>
   );

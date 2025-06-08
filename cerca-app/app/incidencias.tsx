@@ -14,7 +14,7 @@ export default function Incidencias() {
         Para más información, visita nuestra sección de soporte profesional.
       </AppText>
       <Header />
-      <BottomNav active="home" />
+      <BottomNav active="app" />
     </View>
   );
 }
