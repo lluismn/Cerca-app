@@ -1,4 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Asset } from "expo-asset";
 import { useFonts } from "expo-font";
 import { Slot, useRouter } from "expo-router";
 import { useEffect, useState } from "react";
@@ -10,27 +11,43 @@ export default function RootLayout() {
     NunitoSans: require("../assets/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf"),
   });
 
-  const [isCheckingIntro, setIsCheckingIntro] = useState(true);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const checkIntro = async () => {
+    const initApp = async () => {
       try {
+        // 1. Precarga imágenes
+        await Asset.loadAsync([
+          require("../assets/images/check-list.png"),
+          require("../assets/images/baggage.png"),
+          require("../assets/images/glosario.png"),
+          require("../assets/images/logo_cerca.png"),
+          require("../assets/images/warning.png"),
+          require("../assets/images/emergency-call.png"),
+          require("../assets/images/bottomNav/home-home.png"),
+          require("../assets/images/bottomNav/handshake-home.png"),
+          require("../assets/images/bottomNav/call-home.png"),
+          require("../assets/background/home.png"),
+          require("../assets/images/logo-intro.png"),
+        ]);
+
+        // 2. Comprueba si se ha visto la intro
         const hasSeen = await AsyncStorage.getItem("hasSeenIntro");
 
         if (hasSeen !== "true") {
           router.replace("/intro");
         }
       } catch (error) {
-        console.error("Error checking intro status:", error);
-        // In case of an error, navigate to the intro page as a fallback;
+        console.error("❌ Error durante la inicialización:", error);
       } finally {
-        setIsCheckingIntro(false);
+        setIsReady(true); // Solo cuando todo ha terminado
       }
     };
-    checkIntro();
+
+    initApp();
   }, []);
 
-  if (!fontsLoaded) {
+  if (!fontsLoaded || !isReady) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <ActivityIndicator size="large" />
