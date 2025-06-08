@@ -16,7 +16,7 @@ export default function BottomNav({ active }: BottomNavProps) {
       key: "home",
       label: "Inicio",
       icon: require("../assets/images/bottomNav/home-home.png"),
-      href: "/",
+      href: "/home",
     },
     {
       key: "profesionals",

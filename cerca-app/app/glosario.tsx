@@ -1,5 +1,5 @@
 import AppText from "@/components/AppText";
-import GoHomeButton from "@/components/GoHomeButton";
+import BottomNav from "@/components/BottomNav";
 import { StyleSheet, View } from "react-native";
 
 export default function Glosario() {
@@ -15,7 +15,7 @@ export default function Glosario() {
         </AppText>
       </>
       <>
-        <GoHomeButton />
+        <BottomNav active="home" />
       </>
     </View>
   );
