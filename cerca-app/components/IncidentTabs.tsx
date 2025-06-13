@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     gap: 3,
-    marginBottom: 24,
   },
   tabButton: {
     gap: 1,

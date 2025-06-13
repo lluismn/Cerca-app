@@ -13,7 +13,7 @@ type OptionCardProps = {
 export default function OptionCard({  title, description, icon, href }: OptionCardProps) {
     const iconSource =
         icon === 'checklist' ? require('../assets/images/check-list.png') :
-        icon === 'baggage' ? require('../assets/images/baggage.png') :
+        icon === 'baggage' ? require('../assets/images/bottomNav/profesional-app.png') :
         require('../assets/images/glosario.png');
     
     return (
