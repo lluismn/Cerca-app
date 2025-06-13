@@ -32,6 +32,13 @@ export default function RootLayout() {
           require("../assets/images/bottomNav/home-app.png"),
           require("../assets/images/bottomNav/profesional-app.png"),
           require("../assets/images/bottomNav/call-app.png"),
+          require("../assets/images/back.png"),
+          require("../assets/images/incidents/luz.png"),
+          require("../assets/images/incidents/luz_active.png"),
+          require("../assets/images/incidents/agua.png"),
+          require("../assets/images/incidents/agua_active.png"),
+          require("../assets/images/incidents/electro.png"),
+          require("../assets/images/incidents/electro_active.png"),
         ]);
 
         // 2. Comprueba si se ha visto la intro

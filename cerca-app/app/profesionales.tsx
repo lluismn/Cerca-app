@@ -7,7 +7,7 @@ export default function Profesionales() {
     <View
       style={styles.container}
     >
-      <AppText>Contacta con un profesional</AppText>
+      <AppText style={{color: '#000'}}>Contacta con un profesional</AppText>
       <AppText>Pronto podrás reportar incidencias del hogar.</AppText>
       <AppText>
         Para más información, visita nuestra sección de soporte profesional.
